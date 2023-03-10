@@ -35,5 +35,5 @@ This project was created with
     * Jquery: 1.12.1
     * Moment: 2.8.4
 
-## To be done
+## To be done in the future
 * Add Ticketing System
