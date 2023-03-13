@@ -9,7 +9,8 @@ This is a simple CRM application that uses a Node server and MongoDB database to
 * Mobile-friendly design
 
 ## Wireframe
-<img width="717" alt="Screenshot 2023-03-08 at 3 29 51 PM" src="https://user-images.githubusercontent.com/68887503/224232181-f91d2a1e-acc6-41f7-a602-34ebaf992e0d.png">
+<img width="695" alt="Screenshot 2023-03-13 at 10 57 51 AM" src="https://user-images.githubusercontent.com/68887503/224598086-feec3028-f6df-43a5-a5b4-258cbf5bf7bb.png">
+
 
 <img width="617" alt="Screenshot 2023-03-10 at 1 34 33 PM" src="https://user-images.githubusercontent.com/68887503/224232218-62bfbb81-d14d-48c3-9cde-7b0c08e35b77.png">
 
