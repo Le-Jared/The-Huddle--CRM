@@ -1,0 +1,62 @@
+<%- include ('../partials/header'); %>
+<title>Edit User</title>
+<%- include ('../partials/navbar'); %>
+<link rel="stylesheet" type="text/css" href="/styles/login.css">
+
+
+	
+	<div>
+            <div class="container">
+                <h2 class="py-2 page_title">Edit User: <%= user.username %></h2>
+                <form class="form_content" action="/users/<%= user._id %>?_method=PUT" method="POST">
+					<div class="row">
+						<div class="col-lg-4 form-group">
+							<input autocomplete="off" autofocus class="form-control" name="user[first_name]" placeholder="First Name" value="<%= user.first_name %>" type="text">
+						</div>
+						<div class="col-lg-4 form-group">
+							<input autocomplete="off" autofocus class="form-control" name="user[middle_name]" placeholder="Middle Name" value="<%= user.middle_name %>" type="text">
+						</div>
+						<div class="col-lg-4 form-group">
+							<input autocomplete="off" autofocus class="form-control" name="user[last_name]" placeholder="Last Name" value="<%= user.last_name %>" type="text">
+						</div>
+					</div>
+                    <div class="form-group">
+                        <input autocomplete="off" autofocus class="form-control" name="user[username]" placeholder="Username" value="<%= user.username %>" type="text">
+                    </div>    					
+                    <div class="form-group">
+                        <input autocomplete="off" autofocus class="form-control" name="user[email_address]" placeholder="Email Address" value="<%= user.email_address %>" type="text">
+                    </div>
+                    <div class="form-group">
+                        <input autocomplete="off" autofocus class="form-control" name="user[phone_number]" placeholder="Phone Number" value="<%= user.phone_number %>" type="text">
+                    </div> 
+                    <div class="form-group">
+                        <input autocomplete="off" autofocus class="form-control" name="user[street]" placeholder="Street" value="<%= user.street %>" type="text">
+                    </div>    	
+					<div class="row">
+						<div class="col-lg-4 form-group">
+							<input autocomplete="off" autofocus class="form-control" name="user[country]" placeholder="Country" value="<%= user.country %>" type="text">
+						</div>
+						<div class="col-lg-4 form-group">
+							<input autocomplete="off" autofocus class="form-control" name="user[city]" placeholder="City" type="text">
+						</div>
+						<div class="col-lg-4 form-group">
+							<input autocomplete="off" autofocus class="form-control" name="user[zip]" placeholder="Zip" value="<%= user.zip %>" type="text">
+						</div>
+					</div>		
+
+					<div class="form-group">
+						<p>User Permissions:</p>
+						<select class="form-control" name="user[user_permissions]" >
+							  <option value="<%= user.user_permissions %>"><%= user.user_permissions %></option>
+							  <option value="Administrator">Administrator</option>
+							  <option value="Manager">Manager</option>
+							  <option value="User">User</option>
+						</select>
+                    </div>
+                    <button class="button zoom" type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+
+
+<%- include ('../partials/footer'); %>

@@ -1,0 +1,88 @@
+<%- include ('../partials/header'); %>
+<title>Edit Job</title>
+<%- include ('../partials/navbar'); %>
+<link rel="stylesheet" type="text/css" href="/styles/login.css">
+	
+	<div>
+            <div class="container">
+                <h2 class="py-2 page_title">Edit Job:</h2>
+                <form action="/jobs/<%= job._id %>?_method=PUT" class="form_content" method="POST">
+					<div class="form-group">
+                        <input autocomplete="off" autofocus class="form-control" name="job[job_name]" value="<%= job.job_name %>" type="text" required>
+                    </div> 
+					
+					<p>Job Location:</p>
+					<div class="form-group">
+                        <input autocomplete="off" autofocus class="form-control" name="job[street]" value="<%= job.street %>" placeholder="Street" type="text">
+                    </div>    	
+					<div class="row">
+						<div class="col-lg-4 form-group">
+							<input autocomplete="off" autofocus class="form-control" name="job[country]" value="<%= job.country %>" placeholder="Country" type="text">
+						</div>
+						<div class="col-lg-4 form-group">
+							<input autocomplete="off" autofocus class="form-control" name="job[city]" value="<%= job.city %>" placeholder="City" type="text">
+						</div>
+						<div class="col-lg-4 form-group">
+							<input autocomplete="off" autofocus class="form-control" name="job[zip]" value="<%= job.zip %>" placeholder="Zip" type="text">
+						</div>
+					</div>	
+					
+					<div class="form-group">
+						<p>Associated Client:</p>
+						<select class="form-control dropdown_search" name="job[client]">
+							<% if (job.client) { %>
+								<option value="<%= job["client"]._id %>">
+									<% if (job["client"].organization_name) { %>
+									<%= job["client"].organization_name %>
+									<% } else { %>
+									<%= job["client"].last_name %>, <%= job["client"].first_name %> <%= job["client"].middle_name %>
+									<% }; %>													
+								</option>
+							<% } else { %>
+								<option value="[deleted]">
+									[deleted]													
+								</option>
+							<% } %>	
+							<% clients.forEach(function(client){ %>							 
+								<% if (client.active) { %>	
+									<option value="<%= client._id %>">
+									<% if (client.organization_name) { %>
+									<%= client.organization_name %>
+									<% } else { %>
+									<%= client.last_name %>, <%= client.first_name %> <%= client.middle_name %>
+									<% } %>
+								</option>
+								<% } %>								   
+							<% }); %>
+						</select>
+                    </div>					
+					
+                    <div class="form-group">
+						<input type="date" class="form-control" name="job[start_date]" value="<%= start_date %>" required>
+                    </div>
+                    <div class="form-group">
+						<input type="date" class="form-control" name="job[end_date]" value="<%= end_date %>" required>
+                    </div>		
+					
+					<div class="row">
+						<div class="col-lg-4 form-group">
+							<span>$</span>
+							<div class="billing">
+								<input autocomplete="off" autofocus class="form-control" name="job[billing_price]" value="<%= job.billing_price %>" type="text">
+							</div>
+							<label for="job[billing_price]">Format: 0000.00</label>
+						</div>
+					</div>
+					
+                    <div class="form-group">
+						<p>Job Description:</p>
+                        <textarea name="job[description]"><%= job.description %></textarea>
+                    </div> 					
+
+                    <button class="button zoom" type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+
+
+<%- include ('../partials/footer'); %>
