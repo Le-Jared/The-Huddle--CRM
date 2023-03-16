@@ -3,9 +3,8 @@ A simple Web-based Client Relationship Management application that uses back-end
 
 [Click here](https://poised-coveralls-cow.cyclic.app/) to see it in action
 
-Username: Admin
-
-Password: Password
+- Username: Admin
+- Password: Password
 
 ## General Info
 This is a simple CRM application that uses a Node server and MongoDB database to display various information to a small business about their client relations.  Features of this application include:
@@ -14,11 +13,35 @@ This is a simple CRM application that uses a Node server and MongoDB database to
 * Datatables and charts.js on the front-end for easy visual views of information
 * Mobile-friendly design
 
+## Users' Stories
+
+| As a ...  | I want ...  | Feature
+| :-------- |:------------|:---------
+| User | to login/register/logout | Authentication (Security)/POST Request
+| User | to change password | PUT Request with Password Hashing
+| User | to have an overview of all data through visualisations | Overview of CRM /GET Request
+| User | to access page with all Clients | Overview of Categories/GET Request
+| User | to add/edit/delete Clients | POST/PUT/DELETE Requests
+| User | to access page with all Jobs | Overview of Categories/GET Request
+| User | to add/edit/delete Jobs | POST/PUT/DELETE Requests
+| User | to access page with all transactions | Overview of Transactions/GET Request
+| User | to add/edit/delete transactions | POST/PUT/DELETE Requests
+| Admin | to have different authorisation rights for users | Authorisation
+| Admin | to create User | Create User Form (Security)/GET Request
+
+
 ## Wireframe
-<img width="695" alt="Screenshot 2023-03-13 at 10 57 51 AM" src="https://user-images.githubusercontent.com/68887503/224598086-feec3028-f6df-43a5-a5b4-258cbf5bf7bb.png">
+<img width="582" alt="Screenshot 2023-03-16 at 6 11 00 PM" src="https://user-images.githubusercontent.com/68887503/225585178-04f31cc6-fcc0-471f-9c39-c250bf580ec9.png">
+
 
 
 <img width="617" alt="Screenshot 2023-03-10 at 1 34 33 PM" src="https://user-images.githubusercontent.com/68887503/224232218-62bfbb81-d14d-48c3-9cde-7b0c08e35b77.png">
+
+## Model
+Using the Model-View-Controller approach, the model in this CRUD app exists in the form of a database. The database employed is MongoDB, which is NoSQL in nature. The Entity-Relationship-Diagram (ERD) is shown below for clarity.
+
+## ERD Model
+![Screenshot 2023-03-16 at 6 09 21 PM](https://user-images.githubusercontent.com/68887503/225584784-929a3112-033c-401c-a011-66cf764e3405.png)
 
 
 ## Technologies
@@ -50,3 +73,4 @@ This project was created with
 
 ## To be done in the future
 * Add Ticketing System
+
