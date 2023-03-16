@@ -27,7 +27,7 @@ app.use(express.urlencoded({extended: true}));
 // use methodOverride
 app.use(methodOverride("_method"));
 
-
+mongoose.set('useFindAndModify', false);
 require('dotenv').config();
 
 mongoose.connect(process.env.MongoDB, {
