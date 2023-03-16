@@ -30,7 +30,7 @@ app.use(methodOverride("_method"));
 
 require('dotenv').config();
 
-mongoose.connect(process.env.DATABASE_URL, {
+mongoose.connect(process.env.MongoDB, {
 	useNewUrlParser: true,
 	useCreateIndex: true,
 	useUnifiedTopology: true,
@@ -45,7 +45,7 @@ mongoose.connect(process.env.DATABASE_URL, {
 const session = require("express-session");
 const MongoDBStore = require("connect-mongodb-session")(session);
 const store = new MongoDBStore({
-	uri: process.env.DATABASE_URL,
+	uri: process.env.MongoDB,
 	collection: 'mySessions'
 });
 
