@@ -1,5 +1,9 @@
 # The-Huddle
-A simple Web-based Client Relationship Management application that uses back-end and front-end technologies. I created this as an ambitious second project for my General Assembly BootCamp.
+A simple Web-based Client Relationship Management application that uses back-end and front-end technologies. I created this as an ambitious second project for my General Assembly BootCamp. 
+
+[Click here](https://poised-coveralls-cow.cyclic.app/) to see it in action
+Username: Admin
+Password: Password
 
 ## General Info
 This is a simple CRM application that uses a Node server and MongoDB database to display various information to a small business about their client relations.  Features of this application include:
