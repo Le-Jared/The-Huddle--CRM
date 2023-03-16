@@ -37,7 +37,7 @@ var clientSchema = new mongoose.Schema({
         validate: {
             validator: function(v) {
                 // This regex checks if the phone number format is valid
-                return /^\d{10}$/.test(v);
+                return /^\d{8}$/.test(v);
             },
             message: '{VALUE} is not a valid phone number!'
         }
