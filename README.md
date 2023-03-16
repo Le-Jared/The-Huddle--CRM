@@ -43,6 +43,19 @@ Using the Model-View-Controller approach, the model in this CRUD app exists in t
 ## ERD Model
 ![Screenshot 2023-03-16 at 6 09 21 PM](https://user-images.githubusercontent.com/68887503/225584784-929a3112-033c-401c-a011-66cf764e3405.png)
 
+## View
+The views were generated using EJS to dynamically display information passed by the Controller when rendered. 
+
+The views comprise tables to display relevant information to users, such as input fields, and buttons for the user to interact with the application. 
+
+Lastly, EJS partials were used to streamline the code within the views. 
+
+## Controller
+There are five categories of controllers namely:client, dashboard,job,transaction and users
+
+The routes for each of these functions adhere to REST conventions.
+
+Passport-Local-Mongoose is used to hash passwords upon creation and login so that the passwords are not stored on the database. Once a user is authenticated after login, express-session is used to authorize them for access to various parts of the app, according to their user account. 
 
 ## Technologies
 This project was created with
