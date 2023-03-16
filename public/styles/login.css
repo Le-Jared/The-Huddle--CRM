@@ -1,0 +1,50 @@
+form {
+	max-width: 65%;
+	margin: auto;
+}
+
+.form-control {
+    /* width: 65%; */
+    margin: auto;
+}
+
+#register {
+    padding-top: 1rem;
+}
+
+a {
+    color: white;
+}
+
+.button {
+    font-size: 1.5rem;
+    color: white;
+    background:darkblue;
+    padding: 10px;
+    border: 2px solid white;
+    border-radius: 10px;
+}
+
+.top_margin {
+	  margin-top: 57px;
+}
+
+.container {
+    background-color: whitesmoke;
+}
+
+
+.login-page {
+    background: #096192;
+    background-size: cover;
+  }
+  
+
+p {
+	margin-top: 0rem;
+	margin-bottom: 0.5rem;
+}
+
+.button {
+	margin-bottom: 1rem;
+}

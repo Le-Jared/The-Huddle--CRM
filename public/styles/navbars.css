@@ -65,7 +65,7 @@
 
 .vertical-nav .mobile_links {
 	display: none;
-	color: white;
+	color: white !important;
 }
 
 /* For keeping the navbar active on desktop */
@@ -129,7 +129,7 @@
 /* ====================================================== */
 
 .navbar {
-    background-color:grey;
+    background-color:darkblue;
     z-index: 2;
 }
 
@@ -163,7 +163,7 @@
 }
 
 .vertical-nav .nav-item .nav-link {
-    border: whitesmoke;
+    border: white;
     background: #91BAD6;
     border-radius: 25px;
     text-align: center;
@@ -172,5 +172,4 @@
 .Welcome {
   color: black;
 }
-
 

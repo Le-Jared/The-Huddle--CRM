@@ -34,8 +34,7 @@ mongoose.connect(process.env.MongoDB, {
 	useNewUrlParser: true,
 	useCreateIndex: true,
 	useUnifiedTopology: true,
-  	serverSelectionTimeoutMS: 5000,
-	useFindAndModify: false,
+  	serverSelectionTimeoutMS: 5000
 }).then (() => {
 	console.log("Connected to the database");
 }).catch(err => {
@@ -95,7 +94,7 @@ let isLoggedIn = require("./bin/userPermissions/isLoggedIn");
 const users  = require("./controllers/users"),
 clients 	 = require("./controllers/clients"),
 jobs 		 = require("./controllers/jobs"),
-transactions = require("./controllers/transactions"),
+transactions = require("./controllers/transactions");
 dashboard 	 = require("./controllers/dashboard");
 
 app.use("/users", users);
